@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "company": "Tech Solutions Inc.",
+    "location": "Remote",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "salary": "$80,000 - $100,000",
+    "datePosted": "2024-07-11"
+  },
+  {
+    "id": 2,
+    "title": "Backend Developer",
+    "company": "Data Services Co.",
+    "location": "New York, NY",
+    "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    "salary": "$90,000 - $110,000",
+    "datePosted": "2024-07-10"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Designer",
+    "company": "Design Innovations Ltd.",
+    "location": "San Francisco, CA",
+    "description": "Nulla facilisi. Morbi sagittis semper ante, vel tempor dui tempor ac.",
+    "salary": "$70,000 - $90,000",
+    "datePosted": "2024-07-09"
+  },
+  {
+    "id": 4,
+    "title": "Product Manager",
+    "company": "Tech Enterprises",
+    "location": "Boston, MA",
+    "description": "Etiam vel massa at turpis aliquet egestas.",
+    "salary": "$100,000 - $120,000",
+    "datePosted": "2024-07-08"
+  },
+  {
+    "id": 5,
+    "title": "Data Scientist",
+    "company": "Analytics Solutions Inc.",
+    "location": "Chicago, IL",
+    "description": "Suspendisse ullamcorper id nisi ac lacinia.",
+    "salary": "$95,000 - $115,000",
+    "datePosted": "2024-07-07"
+  },
+  {
+    "id": 6,
+    "title": "Full Stack Developer",
+    "company": "WebTech Ltd.",
+    "location": "Austin, TX",
+    "description": "Phasellus vitae semper justo, eget hendrerit velit.",
+    "salary": "$85,000 - $105,000",
+    "datePosted": "2024-07-06"
+  },
+  {
+    "id": 7,
+    "title": "Marketing Specialist",
+    "company": "Digital Marketing Co.",
+    "location": "Seattle, WA",
+    "description": "Vivamus non velit non metus varius fermentum.",
+    "salary": "$75,000 - $95,000",
+    "datePosted": "2024-07-05"
+  },
+  {
+    "id": 8,
+    "title": "Software Engineer",
+    "company": "Software Solutions Ltd.",
+    "location": "Denver, CO",
+    "description": "Fusce sit amet velit eu sem feugiat finibus.",
+    "salary": "$90,000 - $110,000",
+    "datePosted": "2024-07-04"
+  },
+  {
+    "id": 9,
+    "title": "Customer Support Specialist",
+    "company": "Customer Care Inc.",
+    "location": "Miami, FL",
+    "description": "Curabitur tristique erat at massa scelerisque, et pharetra eros auctor.",
+    "salary": "$60,000 - $80,000",
+    "datePosted": "2024-07-03"
+  },
+  {
+    "id": 10,
+    "title": "Operations Manager",
+    "company": "Operations Excellence Co.",
+    "location": "Los Angeles, CA",
+    "description": "Donec aliquet justo sit amet nulla faucibus suscipit.",
+    "salary": "$110,000 - $130,000",
+    "datePosted": "2024-07-02"
+  }
+]

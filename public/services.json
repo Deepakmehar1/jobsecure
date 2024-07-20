@@ -1,0 +1,62 @@
+[
+  {
+    "id": "srv001",
+    "title": "Resume Review",
+    "description": "Get a detailed review of your resume with suggestions for improvement.",
+    "dateRequested": "2024-06-01"
+  },
+  {
+    "id": "srv002",
+    "title": "Interview Handhold",
+    "description": "Receive guidance and support throughout your interview process.",
+    "dateRequested": "2024-06-05"
+  },
+  {
+    "id": "srv003",
+    "title": "Career Guidance",
+    "description": "Get professional advice to help you navigate your career path.",
+    "dateRequested": "2024-06-10"
+  },
+  {
+    "id": "srv004",
+    "title": "Mock Interview",
+    "description": "Participate in a mock interview to prepare for real job interviews.",
+    "dateRequested": "2024-06-15"
+  },
+  {
+    "id": "srv005",
+    "title": "LinkedIn Profile Review",
+    "description": "Optimize your LinkedIn profile to attract recruiters and employers.",
+    "dateRequested": "2024-06-20"
+  },
+  {
+    "id": "srv006",
+    "title": "Cover Letter Review",
+    "description": "Get feedback on your cover letter to make it more effective.",
+    "dateRequested": "2024-06-25"
+  },
+  {
+    "id": "srv007",
+    "title": "Salary Negotiation Tips",
+    "description": "Learn strategies for negotiating your salary and benefits.",
+    "dateRequested": "2024-07-01"
+  },
+  {
+    "id": "srv008",
+    "title": "Networking Strategies",
+    "description": "Develop strategies for building and leveraging your professional network.",
+    "dateRequested": "2024-07-05"
+  },
+  {
+    "id": "srv009",
+    "title": "Job Search Strategies",
+    "description": "Receive advice on how to effectively search for job opportunities.",
+    "dateRequested": "2024-07-10"
+  },
+  {
+    "id": "srv010",
+    "title": "Skill Assessment",
+    "description": "Identify your strengths and areas for improvement through a skill assessment.",
+    "dateRequested": "2024-07-15"
+  }
+]

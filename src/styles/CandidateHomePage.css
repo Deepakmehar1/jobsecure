@@ -1,0 +1,84 @@
+/* styles.css */
+.card {
+  display: none;
+  opacity: 1;
+  transition: 2s ease-in-out;
+  background-color: #c6f9ff;
+  filter: drop-shadow(1px 1px 2px #5b7073);
+}
+
+.card.show {
+  display: block;
+  opacity: 1;
+  border: none;
+  width: 80%;
+  padding: 10px;
+}
+.card.show > ul {
+  list-style: none;
+}
+.card.show > ul > li {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.card.show > ul > li::after {
+  content: " ";
+  width: 70%;
+  height: 2px;
+  background: #5b7073;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  width: 60vw;
+  /* background: #2a2223; */
+  position: absolute;
+  padding: 40px;
+  border-radius: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.toggle-btn {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  gap: 40px;
+}
+.toggle-btn > button {
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  position: relative;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 6px;
+  box-shadow: -1px 1px 1px;
+}
+button.active {
+  background-color: #c6f9ff;
+  z-index: 2;
+}
+button.active::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 0 5px #c6f9ff;
+}
+button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 5px -5px 0 5px #c6f9ff;
+}

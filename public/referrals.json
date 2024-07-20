@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ref001",
+    "title": "Software Engineer",
+    "company": "Tech Solutions",
+    "location": "San Francisco, CA",
+    "description": "Looking for an experienced Software Engineer with a background in full-stack development.",
+    "datePosted": "2024-06-01"
+  },
+  {
+    "id": "ref002",
+    "title": "Product Manager",
+    "company": "Innovatech",
+    "location": "New York, NY",
+    "description": "Seeking a Product Manager to lead our product development team and drive innovation.",
+    "datePosted": "2024-06-05"
+  },
+  {
+    "id": "ref003",
+    "title": "Data Scientist",
+    "company": "DataWorks",
+    "location": "Chicago, IL",
+    "description": "Hiring a Data Scientist with expertise in machine learning and big data analytics.",
+    "datePosted": "2024-06-10"
+  },
+  {
+    "id": "ref004",
+    "title": "UX Designer",
+    "company": "DesignHub",
+    "location": "Los Angeles, CA",
+    "description": "Looking for a UX Designer to create intuitive and user-friendly interfaces.",
+    "datePosted": "2024-06-15"
+  },
+  {
+    "id": "ref005",
+    "title": "DevOps Engineer",
+    "company": "CloudNet",
+    "location": "Seattle, WA",
+    "description": "Seeking a DevOps Engineer with experience in cloud infrastructure and CI/CD pipelines.",
+    "datePosted": "2024-06-20"
+  },
+  {
+    "id": "ref006",
+    "title": "Marketing Specialist",
+    "company": "MarketGuru",
+    "location": "Austin, TX",
+    "description": "Hiring a Marketing Specialist to manage digital marketing campaigns and strategies.",
+    "datePosted": "2024-06-25"
+  },
+  {
+    "id": "ref007",
+    "title": "Sales Executive",
+    "company": "SalesPro",
+    "location": "Boston, MA",
+    "description": "Looking for a Sales Executive with a proven track record in B2B sales.",
+    "datePosted": "2024-07-01"
+  },
+  {
+    "id": "ref008",
+    "title": "HR Manager",
+    "company": "PeopleFirst",
+    "location": "Denver, CO",
+    "description": "Seeking an HR Manager to oversee recruitment and employee relations.",
+    "datePosted": "2024-07-05"
+  },
+  {
+    "id": "ref009",
+    "title": "Financial Analyst",
+    "company": "FinanceCorp",
+    "location": "Dallas, TX",
+    "description": "Hiring a Financial Analyst to provide insights and recommendations based on financial data.",
+    "datePosted": "2024-07-10"
+  },
+  {
+    "id": "ref010",
+    "title": "Customer Support Specialist",
+    "company": "HelpDesk",
+    "location": "Miami, FL",
+    "description": "Looking for a Customer Support Specialist to assist customers with inquiries and issues.",
+    "datePosted": "2024-07-15"
+  }
+]
