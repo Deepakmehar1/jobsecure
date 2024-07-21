@@ -10,7 +10,7 @@ const SideBar = () => {
       setUser(JSON.parse(storedUser));
     }
   }, []);
-  
+
   var i = 0;
 
   var Teack = () => {
@@ -46,23 +46,24 @@ const SideBar = () => {
   const renderList = () => {
     if (localStorage.getItem("user")) {
       return [
-        <li>
-          <Link to="/candidate/home">
+        <li key={"home"}>
+          <Link to="/">
             <i class="fi fi-rr-home"></i>home
           </Link>
         </li>,
-        <li>
+        <li key={"jobs"}>
           <Link to="/jobs">
             <i class="fi fi-rr-list"></i>list
           </Link>
         </li>,
-        <li>
+        <li key={"list"}>
           <Link to="/candidate/home">
             <i class="fi fi-rr-time-past"></i>history
           </Link>
         </li>,
 
         <li
+          key={"logout"}
           onClick={() => {
             localStorage.removeItem("user");
             window.location.href = "/login";
@@ -74,17 +75,18 @@ const SideBar = () => {
       ];
     } else {
       return [
-        <li>
-          <Link to="/candidate/home">
+        <li key={"l-home"}>
+          <Link to="/">
             <i class="fi fi-rr-home"></i>home
           </Link>
         </li>,
-        <li>
+        <li key={"l-jobe"}>
           <Link to="/jobs">
             <i class="fi fi-rr-list"></i>list
           </Link>
         </li>,
         <li
+          key={"login"}
           onClick={() => {
             window.location.href = "/login";
           }}
