@@ -5,7 +5,8 @@ import SearchComponent from "./common/SearchComponent";
 import "../styles/CandidateHomePage.css";
 
 const CandidateHomePage = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState("default");
+  const [currentRef, setCurrentRef] = useState([]);
   const [referrals, setReferrals] = useState([]);
   const [services, setServices] = useState([]);
   const [filteredReferrals, setFilteredReferrals] = useState([]);
@@ -15,7 +16,7 @@ const CandidateHomePage = () => {
     x: 0,
     y: 0,
   });
-  const cardContentRef = useRef(null);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,16 +33,21 @@ const CandidateHomePage = () => {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
   }, []);
 
-  const mousemove = (e) => {
-    setMousePosition({
-      x: e.clientX,
-      y: e.clientY,
-    });
-  };
+  useEffect(() => {
+    const mousemove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+    window.addEventListener("mousemove", mousemove);
+    return () => {
+      window.addEventListener("mousemove", mousemove);
+    };
+  }, []);
 
   const handleSearch = (searchTerm) => {
     const filteredReferrals = referrals.filter((referral) =>
@@ -60,28 +66,30 @@ const CandidateHomePage = () => {
     setActiveCard(card);
   };
 
-  const handleMouseOver = (item) => {
-    setHoveredCard(item);
-    var id = document.querySelector("#" + item.id);
-
-    id.addEventListener("mousemove", mousemove);
+  const handleMouseOver = () => {
+    setHoveredCard("inUl");
   };
 
   const handleMouseLeave = () => {
-    setHoveredCard(null);
+    setHoveredCard("default");
   };
 
-  const cardContentStyles = {
-    left: `${
-      mousePosition.x - (cardContentRef.current?.offsetWidth || 0) / 1.5
-    }px`,
-    top: `${
-      mousePosition.y - (cardContentRef.current?.offsetHeight || 0) / 4
-    }px`,
-  };
+  console.log(mousePosition);
+
+   const handleCurrentIn = (item) => {
+     setCurrentRef(item);
+    
+   };
+
+   const handleCurrentLeave = () => {
+     setCurrentRef(null);
+   };
   const variants = {
     default: {
-      scale: [1, 2, 2, 1, 1],
+      scale: 0,
+    },
+    inUl: {
+      scale:1,
     },
   };
   return (
@@ -89,6 +97,25 @@ const CandidateHomePage = () => {
       {!localStorage.getItem("user") ? (window.location.href = "/login") : ""}
 
       <SearchComponent onSearch={handleSearch} />
+      <motion.div
+        className="cc"
+        variants={variants}
+        animate={hoveredCard}
+        style={{
+          left: mousePosition.x,
+          top: mousePosition.y,
+        }}
+      >
+        {currentRef && (
+          <>
+            <p>
+              {currentRef.company} - {currentRef.location}
+            </p>
+            <p>{currentRef.description}</p>
+            <p>currentRef ID: {currentRef.id}</p>
+          </>
+        )}
+      </motion.div>
       <div className="toggle-container">
         <div className="toggle-btn">
           <button
@@ -105,70 +132,30 @@ const CandidateHomePage = () => {
           </button>
         </div>
         <div className={`card ${activeCard === "referral" ? "show" : ""}`}>
-          <h2>Candidate Referrals</h2>
-          <ul>
+          <ul onMouseMove={handleMouseOver} onMouseLeave={handleMouseLeave}>
             {filteredReferrals.map((referral) => (
               <li
                 id={referral.id}
                 key={referral.id}
-                onMouseOver={() => handleMouseOver(referral)}
-                onMouseLeave={handleMouseLeave}
+                onMouseOver={() => handleCurrentIn(referral)}
+                onMouseLeave={handleCurrentLeave}
               >
                 <h3>{referral.title}</h3>
-                {hoveredCard && hoveredCard.title === referral.title && (
-                  <motion.div
-                    className="card-content"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    style={{
-                      position: "fixed",
-                      pointerEvents: "none",
-                      left: cardContentStyles.left,
-                      top: cardContentStyles.top,
-                    }}
-                    ref={cardContentRef}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  >
-                    <p>
-                      {referral.company} - {referral.location}
-                    </p>
-                    <p>{referral.description}</p>
-                    <p>Referral ID: {referral.id}</p>
-                  </motion.div>
-                )}
+                <h4>{referral.datePosted}</h4>
               </li>
             ))}
           </ul>
         </div>
         <div className={`card ${activeCard === "service" ? "show" : ""}`}>
-          <h2>Candidate Services</h2>
           <ul>
             {filteredServices.map((service) => (
               <li
                 id={service.id}
                 key={service.id}
-                onMouseOver={() => handleMouseOver(service)}
-                onMouseLeave={handleMouseLeave}
+                onMouseOver={() => handleCurrentIn(service)}
+                onMouseLeave={handleCurrentLeave}
               >
                 <h3>{service.title}</h3>
-                {hoveredCard && hoveredCard.title === service.title && (
-                  <motion.div
-                    className="card-content"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    style={{
-                      position: "fixed",
-                      pointerEvents: "none",
-                      left: cardContentStyles.left,
-                      top: cardContentStyles.top,
-                    }}
-                    ref={cardContentRef}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  >
-                    <p>{service.description}</p>
-                    <p>Service ID: {service.id}</p>
-                  </motion.div>
-                )}
               </li>
             ))}
           </ul>
