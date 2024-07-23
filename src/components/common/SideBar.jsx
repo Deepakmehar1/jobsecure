@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Clock from "../../services/Clock";
+import { Turn as Hamburger } from "hamburger-react";
 
 const SideBar = () => {
   const [user, setUser] = useState(null);
@@ -13,7 +14,10 @@ const SideBar = () => {
 
   var i = 0;
 
+
   var Teack = () => {
+      const hamburger = document.querySelector(".hamburger");
+
     if (i === 0) {
       document.querySelector("#loadersvg").style.animation =
         "logo-spin 0.5s cubic-bezier(0.61, 0.02, 0.37, 0.99) 0.1s";
@@ -24,7 +28,7 @@ const SideBar = () => {
         document.querySelector("#loadersvg").style.borderBottomLeftRadius =
           "0%";
       }, 500);
-
+      hamburger.classList.add("open");
       return (i = 1);
     } else {
       document.querySelector("#loadersvg").style.animation = "none";
@@ -38,7 +42,7 @@ const SideBar = () => {
         document.querySelector("#loadersvg").style.borderBottomLeftRadius =
           "50%";
       }, 500);
-
+      hamburger.classList.remove("open");
       return (i = 0);
     }
   };
@@ -100,8 +104,13 @@ const SideBar = () => {
     <div>
       <Clock />
 
-      <div className="sidebar" onClick={Teack}>
-        <i class="fi fi-rr-menu-burger"></i>
+      <div className="sidebar hamburger-container" onClick={Teack}>
+        <button class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-bot"></span>
+        </button>
+
+        {/* <i class="fi fi-rr-menu-burger"></i> */}
       </div>
       <div className="sidebar logo">
         <Link to="/jobs">js</Link>

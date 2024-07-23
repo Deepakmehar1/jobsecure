@@ -90,6 +90,56 @@ a {
   scale: 1.05;
   transition: 0.5s linear;
 }
+
+.hamburger-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  border: none;
+  cursor: pointer;
+  top: 50%;
+    transform: translateY(-50%);
+  }
+  .open{
+  transform: translateY(-30%);
+
+}
+.hamburger-top,
+.hamburger-bot {
+  position: absolute;
+  background: #000000;
+  top: 0px;
+  left: 0px;
+  width: 32px;
+  height: 2px;
+}
+
+.hamburger-top {
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger-bot {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(14px);
+}
+
+.open .hamburger-bot {
+  transform: rotate(-45deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg);
+}
+
 .logo {
   left: 80px;
   top: 32px;
