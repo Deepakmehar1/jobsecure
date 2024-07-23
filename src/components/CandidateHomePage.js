@@ -147,7 +147,7 @@ const CandidateHomePage = () => {
           </ul>
         </div>
         <div className={`card ${activeCard === "service" ? "show" : ""}`}>
-          <ul>
+          <ul onMouseMove={handleMouseOver} onMouseLeave={handleMouseLeave}>
             {filteredServices.map((service) => (
               <li
                 id={service.id}
