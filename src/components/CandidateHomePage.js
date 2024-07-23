@@ -108,11 +108,14 @@ const CandidateHomePage = () => {
       >
         {currentRef && (
           <>
-            <p>
-              {currentRef.company} - {currentRef.location}
-            </p>
+            <p>ID: {currentRef.id}</p>
+            <h3>{currentRef.title}</h3>
             <p>{currentRef.description}</p>
-            <p>currentRef ID: {currentRef.id}</p>
+            {currentRef.company?
+            (<h6>
+              {currentRef.company} - {currentRef.location}
+            </h6>):""}
+            <p>{currentRef.dateRequested}</p>
           </>
         )}
       </motion.div>
@@ -141,7 +144,7 @@ const CandidateHomePage = () => {
                 onMouseLeave={handleCurrentLeave}
               >
                 <h3>{referral.title}</h3>
-                <h4>{referral.datePosted}</h4>
+                <h4>{referral.dateRequested}</h4>
               </li>
             ))}
           </ul>
@@ -156,6 +159,7 @@ const CandidateHomePage = () => {
                 onMouseLeave={handleCurrentLeave}
               >
                 <h3>{service.title}</h3>
+                <h4>{service.dateRequested}</h4>
               </li>
             ))}
           </ul>

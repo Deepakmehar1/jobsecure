@@ -23,7 +23,7 @@ ul.list-j > li {
   transform: translateX(-50%);
 }
 ul.list-j > li:nth-child(2n) {
-  background: #282c34;
+  background: #1f1f1f;
   color: white;
 }
 ul.list-j > li p {

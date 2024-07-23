@@ -102,12 +102,25 @@ button.active {
   cursor: pointer;
 }
 
-
 .cc {
   position: fixed;
   height: 200px;
   width: 400px;
-  background-color: #00000b;
+  background-color: #0e0e0e;
+  color: #fffffa;
   z-index: 99;
   pointer-events: none;
+  padding: 8px;
+}
+.cc p{
+  margin-bottom: 0.7rem;
+}
+.cc p:last-child{
+  text-align: end;
+}
+.cc p:first-child{
+  text-align: start;
+}
+.cc h3, .cc h6, .cc p{
+  text-align: center;
 }
