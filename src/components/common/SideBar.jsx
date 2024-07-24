@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Clock from "../../services/Clock";
-import { Turn as Hamburger } from "hamburger-react";
 
 const SideBar = () => {
   const [user, setUser] = useState(null);
