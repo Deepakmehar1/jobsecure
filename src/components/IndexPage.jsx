@@ -16,9 +16,8 @@ const IndexPage = () => {
                     Find a job that suits your interest & skills.
                   </h1>
                   <div className="aliquam-vitae-turpis">
-                    Aliquam vitae turpis in diam convallis finibus in at risus.
-                    Nullam in scelerisque leo, eget sollicitudin velit
-                    bestibulum.
+                    Live life to the fullest in a balanced way at all times.
+                    Always be calm, confident, and polite.
                   </div>
                 </div>
                 <div className="action">
