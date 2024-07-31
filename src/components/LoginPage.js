@@ -36,6 +36,7 @@ const LoginPage = () => {
       </div>
       <form onSubmit={handleSubmit}>
         <h3>Login Here</h3>
+        {console.log(process.env.CLIENT_ID)}
         <div className="form-group">
           <label>Username:</label>
           <input
