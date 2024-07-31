@@ -2,10 +2,8 @@ import React from "react";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import {jwtDecode} from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-
-const clientId =
-  "1033531340902-krknkjqj4645cf1jm33f7oib9g7m6423.apps.googleusercontent.com"; // Replace with your actual client ID
-
+const clientId = process.env.REACT_APP_CLIENT_ID;
+    
 const GoogleLoginButton = () => {
   const navigate = useNavigate();
 

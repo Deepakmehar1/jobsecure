@@ -6,9 +6,6 @@ import GoogleLoginButton from "./GoogleLoginButton";
 import "../styles/LoginPage.css";
 
 const LoginPage = () => {
-  const clienttt = process.env.CLIENT_ID;
-const clinn2 = process.env.REACT_APP_CLIENT_ID;
-
 
   const [credentials, setCredentials] = useState({
     username: "",
@@ -40,7 +37,6 @@ const clinn2 = process.env.REACT_APP_CLIENT_ID;
       </div>
       <form onSubmit={handleSubmit}>
         <h3>Login Here</h3>
-        {console.log(clienttt,process.env,clinn2)}
         <div className="form-group">
           <label>Username:</label>
           <input
