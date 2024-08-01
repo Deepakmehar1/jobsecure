@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SearchComponent from "./SearchComponent"; // Adjust path as necessary
 import "../../styles/LoginPage.css"; // Adjust path as necessary
-
+import "../"
 const ListCard = () => {
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
@@ -10,7 +10,7 @@ const ListCard = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get("/jobs.json"); // Adjust path as necessary
+        const response = await axios.get("../jobs.json"); // Adjust path as necessary
         setJobs(response.data);
         setFilteredJobs(response.data); // Initialize filteredJobs with all jobs
       } catch (error) {
