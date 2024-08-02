@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SearchComponent from "./SearchComponent"; // Adjust path as necessary
 import "../../styles/LoginPage.css"; // Adjust path as necessary
-import "../"
+
 const ListCard = () => {
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);

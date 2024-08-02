@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import IndexPage from "./components/IndexPage";
 import LoginPage from "./components/LoginPage";
 import ListCard from "./components/common/ListCard";
+import JobsCard from "./components/common/JobsCard";
 import SideBar from "./components/common/SideBar";
 import CandidateHomePage from "./components/CandidateHomePage";
 import "./App.css";
@@ -15,7 +16,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<IndexPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/jobs" element={<ListCard />} />
+        <Route path="/lists" element={<ListCard />} />
+        <Route path="/jobs" element={<JobsCard />} />
         <Route path="/candidate/home" element={<CandidateHomePage />} />
       </Routes>
     </Router>
