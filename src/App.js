@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import IndexPage from "./components/IndexPage";
 import LoginPage from "./components/LoginPage";
 import ListCard from "./components/common/ListCard";
-import JobsCard from "./components/common/JobsCard";
+import JobsCard from "./components/Jobs";
 import SideBar from "./components/common/SideBar";
 import CandidateHomePage from "./components/CandidateHomePage";
 import "./App.css";
