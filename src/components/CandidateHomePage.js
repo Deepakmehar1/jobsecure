@@ -45,7 +45,7 @@ const CandidateHomePage = () => {
     };
     window.addEventListener("mousemove", mousemove);
     return () => {
-      window.addEventListener("mousemove", mousemove);
+      window.removeEventListener("mousemove", mousemove);
     };
   }, []);
 
