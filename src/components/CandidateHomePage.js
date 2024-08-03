@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import SearchComponent from "./common/SearchComponent";
