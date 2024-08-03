@@ -56,7 +56,7 @@ const SideBar = () => {
         </li>,
         <li key={"jobs"}>
           <Link to="/jobs">
-            <i class="fi fi-rr-list"></i>list
+            <i class="fi fi-rr-list"></i>jobs
           </Link>
         </li>,
         <li key={"list"}>
@@ -85,7 +85,7 @@ const SideBar = () => {
         </li>,
         <li key={"l-jobe"}>
           <Link to="/jobs">
-            <i class="fi fi-rr-list"></i>list
+            <i class="fi fi-rr-list"></i>jobs
           </Link>
         </li>,
         <li

@@ -22,7 +22,7 @@ const IndexPage = () => {
                 </div>
                 <div className="action">
                   <button className="button">
-                    <div className="primary">Find Job</div>
+                    <Link to="/jobs" className="primary">Find Job</Link>
                   </button>
                   <div className="suggestion">
                     <div className="suggestion1">Suggestion: </div>
