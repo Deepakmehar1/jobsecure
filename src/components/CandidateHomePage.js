@@ -74,8 +74,6 @@ const CandidateHomePage = () => {
     setHoveredCard("default");
   };
 
-  console.log(mousePosition);
-
    const handleCurrentIn = (item) => {
      setCurrentRef(item);
     
